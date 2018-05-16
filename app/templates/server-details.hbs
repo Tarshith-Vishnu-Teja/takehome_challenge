@@ -1,0 +1,28 @@
+{{outlet}}
+{{#fullwidth-tabs as |tab|}}
+  {{#tab.pane title="Stats" icon="fa fa-home"}}
+    <center>
+        {{#each model as |serverData|}}
+            <p>Name: {{serverData.name}}</p>
+            <p>IP Address: {{serverData.ip_address}}</p>
+            <p>Status: {{serverData.status}}</p>
+            <p>Location: {{serverData.location}}</p>
+            {{location-map location=serverData.location}}
+        {{/each}}
+        <button {{action 'goBack'}} class = "btn btn-primary">Back</button>
+    </center>
+  {{/tab.pane}}
+ 
+  {{#tab.pane title="Data" icon="fa fa-profile"}}
+    <center>
+        {{#each model as |serverData|}}
+            <h2>CPU Usage </h2>
+            <p>{{serverData.cpu_usage}}</p>
+            <h2>Events Processed </h2>
+            <p>{{serverData.events_processed}}</p>
+        {{/each}}
+        <button {{action 'goBack'}} class = "btn btn-primary">Back</button>
+    </center>    
+  {{/tab.pane}}
+ 
+{{/fullwidth-tabs}}

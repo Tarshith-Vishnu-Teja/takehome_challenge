@@ -1,0 +1,13 @@
+{{outlet}}
+<center>
+    <h1>Network Inventory</h1>
+    <button {{action 'logout'}} class = 'btn btn-primary'>Logout</button>
+    {{#each model as |server|}}
+        <h3>{{server.name}}</h3>
+        <p>{{server.ip_address}}</p>
+        <p>{{server.location}}</p>
+        <p>{{server.memory}} Megabytes</p>
+        <p>{{server.protocol}} Protocol</p>
+        <button {{action 'gotoServerData' server.id}} class = "btn btn-success">Get Server Details</button>
+    {{/each}}
+</center>

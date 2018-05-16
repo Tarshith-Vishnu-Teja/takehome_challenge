@@ -1,0 +1,10 @@
+{{outlet}}
+<center style = "margin-top:25%">
+    <form>
+        <div class = "form-group">
+            {{input name = "email" type = "email" placeholder = "email" value = email}}<br/>
+            {{input name = "password" type = "password" placeholder = "password" value = password}}<br/>
+            <button  {{action 'validateLogin'}} class = "btn btn-success">Log In</button>
+        </div>
+    </form>
+</center>
