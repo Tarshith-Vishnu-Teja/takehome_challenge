@@ -2,7 +2,8 @@ import Service from '@ember/service';
 import Ember from 'ember';
 import axios from 'npm:axios';
 
-const BASE_URL = 'http://localhost:3000/server/';
+//const BASE_URL = 'http://localhost:3000/server/';
+const BASE_URL = 'http://18.206.165.19:3000/server/';
 
 export default Service.extend({
     auth:Ember.inject.service('auth'),
