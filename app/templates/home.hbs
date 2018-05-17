@@ -1,7 +1,9 @@
 {{outlet}}
 <center>
-    <h1>Network Inventory</h1>
-    <button {{action 'logout'}} class = 'btn btn-primary'>Logout</button>
+    <span>
+        <h1>Network Inventory</h1>
+        <button {{action 'logout'}} class = 'btn btn-primary' style="float: right">Logout</button>
+    </span>
     {{#each model as |server|}}
         <h3>{{server.name}}</h3>
         <p>{{server.ip_address}}</p>
